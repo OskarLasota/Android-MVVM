@@ -4,11 +4,15 @@ android {
     compileSdkVersion 29
     defaultConfig {
         applicationId "com.example.mvvm"
-        minSdkVersion 19
+        minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
+        useLibrary 'android.test.runner'
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        useLibrary 'android.test.base'
+        useLibrary 'android.test.mock'
+
     }
     buildTypes {
         release {
@@ -37,9 +41,9 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
-    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
-    androidTestImplementation 'androidx.test:rules:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
     implementation 'com.google.android.material:material:1.0.0-beta01'
     implementation 'androidx.viewpager:viewpager:1.0.0'
 }
